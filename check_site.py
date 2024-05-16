@@ -26,7 +26,7 @@ def get_ip_address(hostname):
 
 
 def get_phone_number(html_content):
-    soup = BeautifulSoup(html_content, 'html.parser')
+    soup = BeautifulSoup(html_content, 'lxml')
     phone_number_div = soup.find('div', class_='phone-number')
     if phone_number_div:
         phone_number_a = phone_number_div.find('a')
